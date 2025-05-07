@@ -308,7 +308,7 @@ def process_video(video_path, output_dir, model,
             # Extract segment using moviepy
             with VideoFileClip(video_path) as video:
                 # Extract the segment
-                segment_clip = video.subclip(start_time, end_time)
+                segment_clip = video.subclipped(start_time, end_time)
                 
                 # Write the segment to file with optimized settings
                 segment_clip.write_videofile(
