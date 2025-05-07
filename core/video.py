@@ -163,7 +163,8 @@ def process_video(video_path, output_dir, model,
         objects_detected = False
         if current_frame_idx % (skip_frames * 3) == 0:  # Run object detection less frequently
             # Use mixed precision for faster inference if available
-            with torch.cuda.amp.autocast() if torch.cuda.is_available() else torch.no_grad():
+            with torch.amp.autocast('cuda') if torch.cuda.is_available() else torch.no_grad():
+            #with torch.cuda.amp.autocast() if torch.cuda.is_available() else torch.no_grad():
                 results = model(frame)
             
             # Process detections

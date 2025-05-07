@@ -9,6 +9,7 @@ import sys
 import time
 import torch
 import logging
+import cv2
 from IPython.display import display, HTML, clear_output
 import ipywidgets as widgets
 
@@ -108,14 +109,14 @@ def main_jupyter():
     
     # Base directory input
     base_dir_input = widgets.Text(
-        value="../data/import",
+        value="./data/import",
         description="Base Directory:",
         layout=widgets.Layout(width='80%')
     )
     
     # Output directory input
     output_dir_input = widgets.Text(
-        value="../data/processed",
+        value="./data/processed",
         description="Output Directory:",
         layout=widgets.Layout(width='80%')
     )
