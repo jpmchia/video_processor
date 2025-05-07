@@ -11,7 +11,7 @@ import time
 import os
 import logging
 from datetime import timedelta
-from moviepy.editor import VideoFileClip, concatenate_videoclips
+from moviepy import VideoFileClip, concatenate_videoclips
 
 from video_processor.utils.memory import check_memory_usage
 

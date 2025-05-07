@@ -55,8 +55,8 @@ def main_jupyter():
                 
                 /* Style for all jupyter widgets */
                 .jupyter-widgets {
-                    background-color: #1e1e1e !important;
-                    color: #e0e0e0 !important;
+                    /* background-color: #1e1e1e !important; */
+                    /* color: #e0e0e0 !important; */
                 }
                 
                 /* Target HTML elements inside widgets but preserve their colors */
@@ -108,14 +108,14 @@ def main_jupyter():
     
     # Base directory input
     base_dir_input = widgets.Text(
-        value="/mnt/j/Bugs/LAIDG0025410XEDT",
+        value="../data/import",
         description="Base Directory:",
         layout=widgets.Layout(width='80%')
     )
     
     # Output directory input
     output_dir_input = widgets.Text(
-        value="/mnt/j/Bugs/Processed",
+        value="../data/processed",
         description="Output Directory:",
         layout=widgets.Layout(width='80%')
     )
